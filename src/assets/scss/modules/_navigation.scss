@@ -1,0 +1,45 @@
+.ba-header-bar {
+	@include xy-grid-container;
+	display: flex;
+	justify-content: space-between;
+}
+
+// Navigation breakpoints
+.mobile-menu {
+	@include hide-for(medium);
+}
+
+.desktop-menu {
+	@include show-for(medium);
+}
+
+// Mobile menu
+.mobile-menu {
+	display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+	height: 100vh;
+	> ul.menu {
+		padding: 1rem;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+// Tablet and desktop menu
+
+// WP post navigation
+.post-navigation {
+	@include clearfix;
+}
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
+}
